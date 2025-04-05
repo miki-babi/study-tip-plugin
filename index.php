@@ -60,7 +60,7 @@ add_action( 'admin_menu', 'wporg_options_page' );
 function wporg_options_page() {
     add_menu_page(
         'WPOrg',
-        'WPOrg Options',
+        'Study Tip',
         'manage_options',
         plugin_dir_path(__FILE__) . 'templates/view.php',
         null,
@@ -80,5 +80,5 @@ function handle_study_tip_submission() {
     }
     
 }
-// add_action('admin_notices', 'handle_study_tip_submission');
+add_action('admin_notices', 'handle_study_tip_submission');
 add_action('wp_enqueue_scripts', 'study_tip_enqueue_styles');
