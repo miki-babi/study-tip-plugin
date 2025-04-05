@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Study Tip
+ * Plugin Name: Study Tip plugin
  * Plugin URI: https://example.com/study-tip
  * Description: A simple WordPress plugin to provide study tips.
  * Version: 1.0.0
