@@ -35,11 +35,11 @@ function study_tip_enqueue_styles() {
 }
 //submenu 
 function wporg_options_page_html() {
-	// check user capabilities
-	if ( ! current_user_can( 'manage_options' ) ) {
-		return;
-	}
-	?>
+	// // check user capabilities
+	// if ( ! current_user_can( 'manage_options' ) ) {
+	// 	return;
+	// }
+	// ?>
 	<div class="wrap">
 		<h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
 		<form action="options.php" method="post">
@@ -56,16 +56,16 @@ function wporg_options_page_html() {
 	</div>
 	<?php
 }
-function wporg_options_page()
-{
-	add_submenu_page(
-		'tools.php',
-		'WPOrg Options',
-		'WPOrg Options',
-		'manage_options',
-		'wporg',
-		'wporg_options_page_html'
-	);
+add_action( 'admin_menu', 'wporg_options_page' );
+function wporg_options_page() {
+    add_menu_page(
+        'WPOrg',
+        'WPOrg Options',
+        'manage_options',
+        'wporg',
+        'wporg_options_page_html',
+        plugin_dir_url(__FILE__) . 'images/icon.svg',
+        20
+    );
 }
-add_action('admin_menu', 'wporg_options_page');
 add_action('wp_enqueue_scripts', 'study_tip_enqueue_styles');
