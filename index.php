@@ -56,4 +56,16 @@ function wporg_options_page_html() {
 	</div>
 	<?php
 }
+function wporg_options_page()
+{
+	add_submenu_page(
+		'tools.php',
+		'WPOrg Options',
+		'WPOrg Options',
+		'manage_options',
+		'wporg',
+		'wporg_options_page_html'
+	);
+}
+add_action('admin_menu', 'wporg_options_page');
 add_action('wp_enqueue_scripts', 'study_tip_enqueue_styles');
