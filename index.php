@@ -75,7 +75,8 @@ function handle_study_tip_submission() {
         wp_verify_nonce($_POST['study_tip_nonce'], 'study_tip_submit_action')
     ) {
         // safe to handle the data
-        var_dump($_POST);
+        $tip = sanitize_text_field($_POST['tip']);
+        var_dump($tip);
     }
     
 }
