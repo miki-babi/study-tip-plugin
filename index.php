@@ -68,4 +68,12 @@ function wporg_options_page() {
         20
     );
 }
+function handle_study_tip_submission() {
+    if (isset($_POST['tip'])) {
+        echo '<pre>';
+        var_dump($_POST);
+        echo '</pre>';
+    }
+}
+add_action('admin_notices', 'handle_study_tip_submission');
 add_action('wp_enqueue_scripts', 'study_tip_enqueue_styles');
