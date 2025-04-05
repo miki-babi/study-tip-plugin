@@ -80,5 +80,5 @@ function handle_study_tip_submission() {
     }
     
 }
-add_action('admin_notices', 'handle_study_tip_submission');
+// add_action('admin_notices', 'handle_study_tip_submission');
 add_action('wp_enqueue_scripts', 'study_tip_enqueue_styles');
