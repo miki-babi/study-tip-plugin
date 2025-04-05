@@ -4,7 +4,7 @@
  * Plugin URI: https://example.com/study-tip
  * Description: A simple WordPress plugin to provide study tips.
  * Version: 1.0.0
- * Author: Your Name
+ * Author: Mikiyas
  * Author URI: https://example.com
  * License: GPL2
  */
