@@ -69,11 +69,15 @@ function wporg_options_page() {
     );
 }
 function handle_study_tip_submission() {
-    if (isset($_POST['tip'])) {
-        echo '<pre>';
+    if (
+        isset($_POST['tip']) &&
+        isset($_POST['study_tip_nonce']) &&
+        wp_verify_nonce($_POST['study_tip_nonce'], 'study_tip_submit_action')
+    ) {
+        // safe to handle the data
         var_dump($_POST);
-        echo '</pre>';
     }
+    
 }
 add_action('admin_notices', 'handle_study_tip_submission');
 add_action('wp_enqueue_scripts', 'study_tip_enqueue_styles');
