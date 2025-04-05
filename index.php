@@ -64,7 +64,7 @@ function wporg_options_page() {
         'manage_options',
         plugin_dir_path(__FILE__) . 'templates/view.php',
         null,
-        plugin_dir_url(__FILE__) . 'images/icon_wporg.png',
+        plugin_dir_url(__FILE__) . 'images/icon.svg',
         20
     );
 }
